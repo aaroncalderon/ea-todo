@@ -1,7 +1,7 @@
 (function(){
 
 	angular
-		.module('app', ['ngMaterial', 'ngAnimate'])
+		.module('app', ['ngMaterial', 'ngAnimate', 'ngSanitize','markdown']) 
 		.controller('TodoController', ['$scope', 'logger', TodoController]);
 
 	function TodoController($scope, logger) {
@@ -25,8 +25,8 @@
 		function activate() {
 			// Fill sample tasks
 			todo.tasks = [
-				{ text: "Wake up, work out!", completed: true },
-				{ text: "Play chess with yourself", completed: false },
+				{ text: "Wake `up`, _work_ out!", completed: true },
+				{ text: "`Play` __chess__ with yourself", completed: false },
 				{ text: "Stare at the mirror", completed: true },
 				{ text: "Blink two times fast, and one slow", completed: false }
 			];

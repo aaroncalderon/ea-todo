@@ -3,7 +3,7 @@
 	<md-list-item ng-repeat="task in tasks">
 
 		<md-checkbox ng-model="task.completed" ng-change="refreshTasks()"></md-checkbox>
-		<p>{{task.text}}</p>
+		<div class="container" ng-bind-html="task.text | markdown"></div>
 
 	</md-list-item>
 

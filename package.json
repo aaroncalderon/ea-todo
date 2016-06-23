@@ -4,7 +4,7 @@
   "scripts": {
     "postinstall": "install-app-deps",
     "start": "electron ./app --enable-logging --remote-debugging-port=9222",
-    "dev": "NODE_ENV='development' npm run start",
+    "dev": "set NODE_ENV=development && npm run start",
     "dist": "build -owl --x64 && build -wl --ia32",
     "prerelease:osx": "rm -rf release/osx && mkdirp release/osx",
     "release:osx": "cp -rv dist/osx/*.{dmg,zip} release/osx && PACKAGE_VERSION=$(cat app/package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && echo $PACKAGE_VERSION >> ./release/osx/VERSION",
@@ -20,8 +20,7 @@
   "author": "Vjekoslav Ratkajec",
   "devDependencies": {
     "electron-builder": "^4.2.2",
-    "electron-prebuilt": "^1.0.2",
-    "live-reload": "^1.1.0"
+    "electron-prebuilt": "^1.0.2"
   },
   "build": {
     "app-bundle-id": "hr.creaticon.eatodo",

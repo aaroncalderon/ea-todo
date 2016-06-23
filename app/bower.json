@@ -1,0 +1,26 @@
+{
+  "name": "eatodo",
+  "description": "no description",
+  "main": [],
+  "authors": [
+    "Aaron Calderon"
+  ],
+  "license": "MIT",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-sanitize": "~1.5.7",
+    "angular-markdown-filter": "~1.4.0"
+  }
+}

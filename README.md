@@ -10,12 +10,12 @@ So, some of the script commands on the `package.json` file are broken.
 
 1. Clone this repo
     ```
-    git clone https://github.com/aaroncalderon/ea-todo.git -b electron-uml-issue --single-branch electron-uml-issue
+    git clone https://github.com/aaroncalderon/ea-todo.git -b electron-uml-issue-node-int-off --single-branch electron-uml-issue-node-int-off
 
     ```
-    - The above command will clone only the `electon-uml-issue` branch for your convinience.
+    - The above command will clone only the `electron-uml-issue-node-int-off` branch for your convinience.
 
-2. In a terminal execute the following: `cd electron-uml-issue && npm install`
+2. In a terminal execute the following: `cd electron-uml-issue-node-int-off && npm install`
 3. and then `npm run start`
 
 If you see any warnings about auto-updater, please disregard.
@@ -25,6 +25,10 @@ If you see any warnings about auto-updater, please disregard.
 I have set the todo items `task.text` to be interpreted as markdown.
 
 If you open the developer tools you will see some errors messages. These error messages are related to showdown being loades as a `CommonJS/nodeJS` module, instead of as a `Regular Browser` (no loading) behaviour. 
+
+# difference from electron-uml-issue
+
+I have set the `nodeIntegration: flase` property of the created BrowserWindow and behaviour is as expected. 
 
 # EA Todo
 

@@ -1,14 +1,14 @@
-const electron = require('electron');
-const {ipcRenderer} = electron;
-const {remote} = electron;
+// const electron = require('electron');
+// const {ipcRenderer} = electron;
+// const {remote} = electron;
 
 function boot() {
 
 	// Get logger instance and inject it in Angular
-	const logger = remote.getGlobal('logger');
+	// const logger = remote.getGlobal('logger');
 	angular
 		.module('app')
-		.value('logger', logger);
+		// .value('logger', logger);
 
 	angular.bootstrap(document, ['app'], {
 		strictDi: true
@@ -17,6 +17,6 @@ function boot() {
 
 document.addEventListener('DOMContentLoaded', boot);
 
-ipcRenderer.on('update-message', function(event, method) {
-    alert(method);
-});
+// ipcRenderer.on('update-message', function(event, method) {
+//     alert(method);
+// });

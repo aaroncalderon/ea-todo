@@ -81,7 +81,10 @@ app.on('ready', function() {
         name: "ea-todo",
         width: 400,
         height: 600,
-        toolbar: false
+        toolbar: false,
+        webPreferences: { 
+            nodeIntegration: false
+        } 
     });
 
     // Target HTML file which will be opened in window

@@ -2,7 +2,7 @@
 
 	angular
 		.module('app', ['ngMaterial', 'ngAnimate', 'ngSanitize','markdown']) 
-		.controller('TodoController', ['$scope', 'logger', TodoController]);
+		.controller('TodoController', ['$scope', TodoController]);
 
 	function TodoController($scope, logger) {
 
